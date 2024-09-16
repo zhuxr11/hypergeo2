@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto
+autom4te.cache
+config.log
+config.status
+src/config.h
+inst/include/hypergeo2/hypergeo.h

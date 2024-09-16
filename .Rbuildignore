@@ -1,0 +1,9 @@
+^renv$
+^renv\.lock$
+^hypergeo2\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^README\.Rmd$
+^cran-comments\.md$
+^\.github$
+^.*\.m4$
