@@ -33,7 +33,7 @@ The goal of `hypergeo2` is to implement generalized hypergeometric function with
 
 ### System requirements
 
-If you are building from source (e.g. not installing binaries on Windows), you need to prepare for two system requirements: [GMP](https://gmplib.org/) and [MPFR](https://www.mpfr.org/), to facilitate high-precision floating point types. You may follow the installation instructions from their websites, or try the following commands for quick (default) installation.
+If you are building from source (e.g. not installing binaries on Windows), you need to prepare for two system requirements: ['gmp'](https://gmplib.org/) and ['mpfr'](https://www.mpfr.org/), to facilitate high-precision floating point types. You may follow the installation instructions from their websites, or try the following commands for quick (default) installation.
 
 * For Windows with rtools40 (or newer) installed, please run:
 ```bash

@@ -7,7 +7,7 @@ dnl Select optional include paths, from a configure option
 dnl or from an environment variable.
 gmp_include_path=""
 AC_ARG_WITH([gmp-include],
-            AS_HELP_STRING([--with-gmp-include=GMP_INCLUDE],[specify the GMP include path]),
+            AS_HELP_STRING([--with-gmp-include=GMP_INCLUDE],[the 'gmp' include path]),
             [gmp_include_path=$withval])
 HYPERGEO2_CPPFLAGS="-I."
 if test [ -n "$gmp_include_path" ] ; then
@@ -25,7 +25,7 @@ fi
 
 mpfr_include_path=""
 AC_ARG_WITH([mpfr-include],
-            AS_HELP_STRING([--with-mpfr-include=MPFR_INCLUDE],[specify the MPFR include path]),
+            AS_HELP_STRING([--with-mpfr-include=MPFR_INCLUDE],[the 'mpfr' include path]),
             [mpfr_include_path=$withval])
 if test [ -n "$mpfr_include_path" ] ; then
    HYPERGEO2_CPPFLAGS="${HYPERGEO2_CPPFLAGS} -I${mpfr_include_path}"
@@ -60,7 +60,7 @@ fi
 
 mpfr_lib_path=""
 AC_ARG_WITH([mpfr-lib],
-            AS_HELP_STRING([--with-mpfr-lib=MPFR_LIB],[the location of MPFR library]),
+            AS_HELP_STRING([--with-mpfr-lib=MPFR_LIB],[the location of 'mpfr' library]),
             [mpfr_lib_path=$withval])
 if test [ -n "$mpfr_lib_path" ] ; then
    LIBS="-L${mpfr_lib_path} -lmpfr ${LIBS}"

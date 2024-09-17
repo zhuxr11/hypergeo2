@@ -6,7 +6,7 @@
 \alias{hypergeo2-package}
 \title{hypergeo2: Generalized Hypergeometric Function with Tunable High Precision}
 \description{
-This package computes generalized hypergeometric function with tunable high precision in a vectorized manner, with the floating-point datatypes from "mpfr" or "gmp" library. The computation is limited to real numbers.
+Computation of generalized hypergeometric function with tunable high precision in a vectorized manner, with the floating-point datatypes from 'mpfr' or 'gmp' library. The computation is limited to real numbers.
 }
 \seealso{
 Useful links:

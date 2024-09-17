@@ -16,7 +16,7 @@ stats](https://cranlogs.r-pkg.org/badges/grand-total/hypergeo2)](https://CRAN.R-
 
 **Package**: [*hypergeo2*](https://github.com/zhuxr11/hypergeo2)
 0.1.0<br /> **Author**: Xiurui Zhu<br /> **Modified**: 2024-09-17
-13:53:21<br /> **Compiled**: 2024-09-17 13:54:08
+23:33:00<br /> **Compiled**: 2024-09-17 23:33:06
 
 The goal of `hypergeo2` is to implement generalized hypergeometric
 function with tunable high precision. Two floating-point datatypes –
@@ -33,7 +33,7 @@ complex datatypes.
 
 If you are building from source (e.g. not installing binaries on
 Windows), you need to prepare for two system requirements:
-[GMP](https://gmplib.org/) and [MPFR](https://www.mpfr.org/), to
+[‘gmp’](https://gmplib.org/) and [‘mpfr’](https://www.mpfr.org/), to
 facilitate high-precision floating point types. You may follow the
 installation instructions from their websites, or try the following
 commands for quick (default) installation.

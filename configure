@@ -1329,12 +1329,12 @@ Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
   --with-gmp-include=GMP_INCLUDE
-                          specify the GMP include path
+                          the 'gmp' include path
   --with-mpfr-include=MPFR_INCLUDE
-                          specify the MPFR include path
+                          the 'mpfr' include path
   --with-gmp-lib=GMP_LIB  the location of GMP library
   --with-mpfr-lib=MPFR_LIB
-                          the location of MPFR library
+                          the location of 'mpfr' library
   --with-max-iter=MAX_SERIES_ITER
                           the maximal iteration of series
 

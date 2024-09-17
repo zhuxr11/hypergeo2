@@ -31,7 +31,7 @@ This argument is vectorized: you may use different check modes for different inp
 \item{log}{Logical (1L) indicating whether result is given as log(result).
 This argument is \strong{NOT} vectorized: only its first element is used.}
 
-\item{backend}{One of the following: "mpfr" (default) or "gmp", for the realization of
+\item{backend}{One of the following: 'mpfr' (default) or 'gmp', for the realization of
 floating-point datatype of tunable precision. This argument is \strong{NOT} vectorized:
 you may only input character (1L).}
 }
@@ -49,9 +49,9 @@ To use them, please use \code{[[Rcpp::depends(hypergeo2)]]} and \code{#include "
 \details{
 Sometimes, computing generalized hypergeometric function in double precision is not sufficient,
 even though we only need 6-8 accurate digits in the results (see example). Here, two floating-point
-datatypes are provided: \code{mpfr_float} ("mpfr") and \code{gmp_float} ("gmp"). By comparison,
-the "mpfr" backend is safer, since it defines \code{Inf} while the "gmp" backend throws overflow
-exception (see references). But the "gmp" backend results in more accurate results at the same precision,
+datatypes are provided: \code{mpfr_float} ('mpfr') and \code{gmp_float} ('gmp'). By comparison,
+the 'mpfr' backend is safer, since it defines \code{Inf} while the 'gmp' backend throws overflow
+exception (see references). But the 'gmp' backend results in more accurate results at the same precision,
 since it usually uses higher precision than set (see reference and validate it on yourself with the examples).
 }
 \note{
@@ -82,13 +82,13 @@ tryCatch(
     }
   }
 )
-# Precision of 20 digits, default (mpfr) backend
+# Precision of 20 digits, default ('mpfr') backend
 genhypergeo(U = U, L = L, z = z, prec = 20L)
-# Precision of 20 digits, gmp backend
+# Precision of 20 digits, 'gmp' backend
 genhypergeo(U = U, L = L, z = z, prec = 20L, backend = "gmp")
-# Precision of 25 digits, default (mpfr) backend
+# Precision of 25 digits, default ('mpfr') backend
 genhypergeo(U = U, L = L, z = z, prec = 25L)
-# Precision of 25 digits, gmp backend
+# Precision of 25 digits, 'gmp' backend
 genhypergeo(U = U, L = L, z = z, prec = 25L, backend = "gmp")
 }
 \references{
@@ -96,7 +96,7 @@ For the floating-point datatypes of tunable precision:
 \itemize{
 \item Documentation about \href{https://www.boost.org/doc/libs/master/libs/multiprecision/doc/html/boost_multiprecision/tut/floats/mpfr_float.html}{\code{mpfr_float}}
 \item Documentation about \href{https://www.boost.org/doc/libs/master/libs/multiprecision/doc/html/boost_multiprecision/tut/floats/gmp_float.html}{\code{gmp_float}}
-\item Documentation about \href{https://www.mpfr.org/faq.html#:~:text=What\%20are\%20the\%20differences\%20between\%20MPF\%20from\%20GMP,minimum\%20value\%20\%28MPF\%20generally\%20uses\%20a\%20higher\%20precision\%29}{"gmp"'s higher precision}
+\item Documentation about \href{https://www.mpfr.org/faq.html#:~:text=What\%20are\%20the\%20differences\%20between\%20MPF\%20from\%20GMP,minimum\%20value\%20\%28MPF\%20generally\%20uses\%20a\%20higher\%20precision\%29}{higher precision of \code{gmp_float} datatype}
 }
 }
 \author{

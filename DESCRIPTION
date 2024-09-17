@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R: 
     person("Xiurui", "Zhu", , "zxr6@163.com", role = c("aut", "cre"),
            comment = NULL)
-Description: This package computes generalized hypergeometric function with tunable high precision in a vectorized manner, with the floating-point datatypes from "mpfr" or "gmp" library. The computation is limited to real numbers.
+Description: Computation of generalized hypergeometric function with tunable high precision in a vectorized manner, with the floating-point datatypes from 'mpfr' or 'gmp' library. The computation is limited to real numbers.
 License: MIT + file LICENSE
 Suggests: 
     ggplot2,
