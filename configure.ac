@@ -76,7 +76,7 @@ else
 fi
 
 dnl Determine maximal series iteration
-max_series_iter = 10000
+max_series_iter=10000
 AC_ARG_WITH([max-iter],
             AS_HELP_STRING([--with-max-iter=MAX_SERIES_ITER],[the maximal iteration of series]),
             [max_series_iter=$withval])

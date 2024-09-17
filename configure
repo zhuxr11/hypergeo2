@@ -2424,7 +2424,7 @@ else
   fi
 fi
 
-max_series_iter = 10000
+max_series_iter=10000
 
 # Check whether --with-max-iter was given.
 if test ${with_max_iter+y}
@@ -2435,7 +2435,7 @@ fi
 if test  -n "${MAX_ITER}"  ; then
   max_series_iter=${MAX_ITER}
 fi
-sed -i "s/@MAX_SERIES_ITER@/${max_series_iter}/" 'inst/include/hypergeo2/hypergeo.h.in' \
+sed "s/@MAX_SERIES_ITER@/${max_series_iter}/" 'inst/include/hypergeo2/hypergeo.h.in' \
   > 'inst/include/hypergeo2/hypergeo.h'
 
 : ${R_HOME=`R RHOME`}
