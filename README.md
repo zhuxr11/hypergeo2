@@ -15,8 +15,8 @@ stats](https://cranlogs.r-pkg.org/badges/grand-total/hypergeo2)](https://CRAN.R-
 <!-- badges: end -->
 
 **Package**: [*hypergeo2*](https://github.com/zhuxr11/hypergeo2)
-0.0.0.9000<br /> **Author**: Xiurui Zhu<br /> **Modified**: 2024-09-17
-00:12:09<br /> **Compiled**: 2024-09-17 00:12:15
+0.1.0<br /> **Author**: Xiurui Zhu<br /> **Modified**: 2024-09-17
+13:53:21<br /> **Compiled**: 2024-09-17 13:54:08
 
 The goal of `hypergeo2` is to implement generalized hypergeometric
 function with tunable high precision. Two floating-point datatypes –
@@ -245,13 +245,14 @@ ggplot2::ggplot(
 ) +
   ggplot2::geom_point(ggplot2::aes(y = mean / 1000), color = "blue") +
   ggplot2::geom_line(ggplot2::aes(y = mean / 1000), color = "blue") +
-  ggplot2::geom_point(ggplot2::aes(y = (log(abs(err)) + 12) / 8), color = "red") +
-  ggplot2::geom_line(ggplot2::aes(y = (log(abs(err)) + 12) / 8), color = "red") +
+  ggplot2::geom_point(ggplot2::aes(y = (log(abs(err)) + 20) / 16), color = "red") +
+  ggplot2::geom_line(ggplot2::aes(y = (log(abs(err)) + 20) / 16), color = "red") +
   ggplot2::scale_x_continuous(breaks = seq_along(unique(bench_res[["prec"]])),
                               minor_breaks = NULL,
                               labels = unique(bench_res[["prec"]])) +
   ggplot2::scale_y_continuous(
-    sec.axis = ggplot2::sec_axis(~. * 8 - 12,
+    sec.axis = ggplot2::sec_axis(~. * 16 - 20,
+                                 breaks = seq(-20, 0, by = 4),
                                  name = "Logarithmic absolute relative error")
   ) +
   ggplot2::facet_wrap(ggplot2::vars(backend), ncol = 1L) +

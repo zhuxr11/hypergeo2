@@ -206,13 +206,14 @@ ggplot2::ggplot(
 ) +
   ggplot2::geom_point(ggplot2::aes(y = mean / 1000), color = "blue") +
   ggplot2::geom_line(ggplot2::aes(y = mean / 1000), color = "blue") +
-  ggplot2::geom_point(ggplot2::aes(y = (log(abs(err)) + 12) / 8), color = "red") +
-  ggplot2::geom_line(ggplot2::aes(y = (log(abs(err)) + 12) / 8), color = "red") +
+  ggplot2::geom_point(ggplot2::aes(y = (log(abs(err)) + 20) / 16), color = "red") +
+  ggplot2::geom_line(ggplot2::aes(y = (log(abs(err)) + 20) / 16), color = "red") +
   ggplot2::scale_x_continuous(breaks = seq_along(unique(bench_res[["prec"]])),
                               minor_breaks = NULL,
                               labels = unique(bench_res[["prec"]])) +
   ggplot2::scale_y_continuous(
-    sec.axis = ggplot2::sec_axis(~. * 8 - 12,
+    sec.axis = ggplot2::sec_axis(~. * 16 - 20,
+                                 breaks = seq(-20, 0, by = 4),
                                  name = "Logarithmic absolute relative error")
   ) +
   ggplot2::facet_wrap(ggplot2::vars(backend), ncol = 1L) +
