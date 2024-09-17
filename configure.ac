@@ -158,6 +158,7 @@ echo "
 
     cppflags: ${CPPFLAGS} ${HYPERGEO2_CPPFLAGS}
     libs:     ${LIBS}
+    max_iter: ${max_series_iter}
 
   --------------------------------------------------
 "
