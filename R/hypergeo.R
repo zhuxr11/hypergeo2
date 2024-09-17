@@ -54,8 +54,20 @@
 #' if (length(find.package("hypergeo", quiet = TRUE)) > 0L) {
 #'   hypergeo::genhypergeo(U = U, L = L, z = z)
 #' }
-#' # Default (double) precision
-#' genhypergeo(U = U, L = L, z = z)
+#' # Default (double) precision: this may result in cancellation error on some platforms
+#' tryCatch(
+#'   genhypergeo(U = U, L = L, z = z),
+#'   error = function(err) {
+#'     if (grepl("Cancellation is so severe that no bits in the result are correct",
+#'               conditionMessage(err)) == TRUE) {
+#'       message("! Cancellation error on your platform: ",
+#'               "you may need a higher [prec] than double ([prec = NULL]): ",
+#'               conditionMessage(err))
+#'     } else {
+#'       stop(err)
+#'     }
+#'   }
+#' )
 #' # Precision of 20 digits, default (mpfr) backend
 #' genhypergeo(U = U, L = L, z = z, prec = 20L)
 #' # Precision of 20 digits, gmp backend
