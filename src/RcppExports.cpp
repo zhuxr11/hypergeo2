@@ -14,7 +14,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // genhypergeo_vec
-RObject genhypergeo_vec(const List& U, const List& L, const NumericVector& z, const Nullable<List>& prec, const LogicalVector& check_mode, const LogicalVector& log, const String& backend);
+NumericVector genhypergeo_vec(const List& U, const List& L, const NumericVector& z, const Nullable<List>& prec, const LogicalVector& check_mode, const LogicalVector& log, const String& backend);
 static SEXP _hypergeo2_genhypergeo_vec_try(SEXP USEXP, SEXP LSEXP, SEXP zSEXP, SEXP precSEXP, SEXP check_modeSEXP, SEXP logSEXP, SEXP backendSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -58,7 +58,7 @@ RcppExport SEXP _hypergeo2_genhypergeo_vec(SEXP USEXP, SEXP LSEXP, SEXP zSEXP, S
 static int _hypergeo2_RcppExport_validate(const char* sig) { 
     static std::set<std::string> signatures;
     if (signatures.empty()) {
-        signatures.insert("RObject(*genhypergeo_vec)(const List&,const List&,const NumericVector&,const Nullable<List>&,const LogicalVector&,const LogicalVector&,const String&)");
+        signatures.insert("NumericVector(*genhypergeo_vec)(const List&,const List&,const NumericVector&,const Nullable<List>&,const LogicalVector&,const LogicalVector&,const String&)");
     }
     return signatures.find(sig) != signatures.end();
 }

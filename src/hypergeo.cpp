@@ -23,13 +23,13 @@ Nullable<T2> nullable_getv(const Nullable<T1>& x, const int& idx) {
 
 // [[Rcpp::interfaces(r, cpp)]]
 // [[Rcpp::export]]
-RObject genhypergeo_vec(const List& U,
-                        const List& L,
-                        const NumericVector& z,
-                        const Nullable<List>& prec = R_NilValue,
-                        const LogicalVector& check_mode = true,
-                        const LogicalVector& log = false,
-                        const String& backend = "mpfr") {
+NumericVector genhypergeo_vec(const List& U,
+                              const List& L,
+                              const NumericVector& z,
+                              const Nullable<List>& prec = R_NilValue,
+                              const LogicalVector& check_mode = true,
+                              const LogicalVector& log = false,
+                              const String& backend = "mpfr") {
   ComplexVector z_dummy = as<ComplexVector>(z);
   if (std::min({U.length(), L.length(), z_dummy.length()}) < 1) {
     return NumericVector(0);
