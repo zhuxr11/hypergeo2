@@ -51,7 +51,8 @@ exception (see references). But the 'gmp' backend results in more accurate resul
 since it usually uses higher precision than set (see reference and validate it on yourself with the examples).
 
 \code{genhypergeo} is available in \code{\link[Rcpp:Rcpp-package]{Rcpp}}
-as \code{hypergeo2::genhypergeo_vec()}.
+as \code{hypergeo2::genhypergeo_vec()}; its non-vectorized version is named
+in \code{\link[Rcpp:Rcpp-package]{Rcpp}} as \code{hypergeo2::genhypergeo_cpp()}.
 
 Its non-vectorized version is available in
 \code{\link[Rcpp:Rcpp-package]{Rcpp}} as \code{hypergeo2::genhypergeo_<int SXP, typename T1, typename T2>()},
