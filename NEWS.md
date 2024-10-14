@@ -1,6 +1,8 @@
 # hypergeo2 0.2.0
 
-# hypergeo2 0.1.1
+## Enhancements
+
+* Add `genhypergeo_cpp()` for non-vectorized implementation in `Rcpp` interface.
 
 ## Bug fixes
 
