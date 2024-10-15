@@ -15,7 +15,7 @@
 #' This argument is **NOT** vectorized: only its first element is used.
 #' @param backend One of the following: 'mpfr' (default) or 'gmp', for the realization of
 #' floating-point datatype of tunable precision. This argument is **NOT** vectorized:
-#' you may only input character (1L).
+#' you may only input one of the backends.
 #'
 #' @details
 #' Sometimes, computing generalized hypergeometric function in double precision is not sufficient,
@@ -29,8 +29,9 @@
 #' as \code{hypergeo2::genhypergeo_vec()}; its non-vectorized version is named
 #' in \code{\link[Rcpp:Rcpp-package]{Rcpp}} as \code{hypergeo2::genhypergeo_cpp()}.
 #'
-#' Its non-vectorized version is available in
-#' \code{\link[Rcpp:Rcpp-package]{Rcpp}} as \code{hypergeo2::genhypergeo_<int SXP, typename T1, typename T2>()},
+#' If a custom backend (e.g. [\code{cpp_bin_float}](https://www.boost.org/doc/libs/master/libs/multiprecision/doc/html/boost_multiprecision/tut/floats/cpp_bin_float.html))
+#' is to be used, the underlying templated function is available in \code{\link[Rcpp:Rcpp-package]{Rcpp}}
+#' as \code{hypergeo2::genhypergeo_<int SXP, typename T1, typename T2>()},
 #' where \code{SXP} is the type of \code{Rcpp::Vector}, \code{T1} is the input/output datatype
 #' and \code{T2} is the datatype used in computation (see references for example datatypes).
 #'
@@ -44,14 +45,17 @@
 #' @note Change log:
 #' \itemize{
 #'   \item{0.1.0 Xiurui Zhu - Initiate the function.}
+#'   \item{0.2.0 Xiurui Zhu - Add \code{genhypergeo_cpp()} for non-vectorized implementation in `Rcpp` interface;
+#'   limit the return of \code{genhypergeo_vec()} to \code{NumericVector}.}
+#'   \item{0.2.1 Xiurui Zhu - Update documentation.}
 #' }
 #' @author Xiurui Zhu
 #'
 #' @references For the floating-point datatypes of tunable precision:
 #' * Documentation about [\code{mpfr_float}](https://www.boost.org/doc/libs/master/libs/multiprecision/doc/html/boost_multiprecision/tut/floats/mpfr_float.html),
-#' with datatype \code{boost::multiprecision::number<boost::multiprecision::backends::mpfr_float_backend<0>>}
+#' with datatype \code{boost::multiprecision::number <boost::multiprecision::backends::mpfr_float_backend<0>>}
 #' * Documentation about [\code{gmp_float}](https://www.boost.org/doc/libs/master/libs/multiprecision/doc/html/boost_multiprecision/tut/floats/gmp_float.html),
-#' with datatype \code{boost::multiprecision::number<boost::multiprecision::backends::gmp_float<0>>}
+#' with datatype \code{boost::multiprecision::number <boost::multiprecision::backends::gmp_float<0>>}
 #' * Documentation about [higher precision of \code{gmp_float} datatype](https://www.mpfr.org/faq.html#:~:text=What%20are%20the%20differences%20between%20MPF%20from%20GMP,minimum%20value%20%28MPF%20generally%20uses%20a%20higher%20precision%29)
 #'
 #' @export

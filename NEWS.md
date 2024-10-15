@@ -1,5 +1,10 @@
 # hypergeo2 (development version)
 
+## Enhancements
+
+* Update documentations.
+
+
 # hypergeo2 0.2.0
 
 ## Enhancements
