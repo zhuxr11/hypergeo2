@@ -46,7 +46,7 @@
 #' \itemize{
 #'   \item{0.1.0 Xiurui Zhu - Initiate the function.}
 #'   \item{0.2.0 Xiurui Zhu - Add \code{genhypergeo_cpp()} for non-vectorized implementation in `Rcpp` interface;
-#'   limit the return of \code{genhypergeo_vec()} to \code{NumericVector}.}
+#'     limit the return of \code{genhypergeo_vec()} to \code{NumericVector}.}
 #'   \item{0.2.1 Xiurui Zhu - Update documentation.}
 #' }
 #' @author Xiurui Zhu
