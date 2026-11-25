@@ -7,3 +7,5 @@
 ^cran-comments\.md$
 ^\.github$
 ^.*\.m4$
+.Rprofile*
+renv*
