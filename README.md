@@ -15,8 +15,8 @@ stats](https://cranlogs.r-pkg.org/badges/grand-total/hypergeo2)](https://CRAN.R-
 <!-- badges: end -->
 
 **Package**: [*hypergeo2*](https://github.com/zhuxr11/hypergeo2)
-0.2.0<br /> **Author**: Xiurui Zhu<br /> **Modified**: 2024-09-17
-23:33:00<br /> **Compiled**: 2024-10-14 22:55:54
+0.2.1<br /> **Author**: Xiurui Zhu<br /> **Modified**: 2026-11-24
+10:21:19<br /> **Compiled**: 2026-11-26 10:00:14
 
 The goal of `hypergeo2` is to implement generalized hypergeometric
 function with tunable high precision. Two floating-point datatypes –
