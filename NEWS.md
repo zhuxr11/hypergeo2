@@ -1,8 +1,12 @@
-# hypergeo2 (development version)
+# hypergeo2 0.2.1
 
 ## Enhancements
 
 * Update documentations.
+
+## Bug fixes
+
+* Use modified zeta.hpp to permit Windows builds with Boost 1.90
 
 
 # hypergeo2 0.2.0
