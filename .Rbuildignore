@@ -9,3 +9,5 @@
 ^.*\.m4$
 .Rprofile*
 renv*
+^src/config\.h$
+^inst/include/hypergeo2/hypergeo\.h$
