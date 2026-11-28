@@ -2,3 +2,6 @@
 # the repo. If this file has CRLF line endings, R's check process will complain.
 configure.ac text eol=lf
 src/config.h text eol=lf
+src/config.h.in text eol=lf
+src/config.h.win text eol=lf
+inst/include/hypergeo2/hypergeo.h.in text eol=lf
